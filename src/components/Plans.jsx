@@ -1,46 +1,58 @@
-import React from 'react'
-import { PlansData } from '../data/data'
-import { RiCheckboxCircleFill } from '@remixicon/react'
+import React from 'react';
+import { PlansData } from '../data/data';
+import { RiCheckboxCircleFill } from '@remixicon/react';
+import { Link } from 'react-router-dom';
 
 const Plans = () => {
   return (
     <>
-      <div className='text-center mt-30 mb-10'>
-        <h1 className='text-6xl font-semibold w-xl m-auto my-8 '>{PlansData[0].title}</h1>
-        <p className='text-lg font-bold my-6 text-secondary mt-4'>{PlansData[0].subtitle}</p>
+      <div className='text-center mt-20 md:mt-30 mb-10 px-4'>
+        {/* Responsive Heading */}
+        <h1 className='text-4xl md:text-5xl lg:text-6xl font-semibold max-w-xl mx-auto my-8'>{PlansData[0].title}</h1>
+        <p className='text-base md:text-lg font-bold my-6 text-secondary'>{PlansData[0].subtitle}</p>
+        
+        {/* Responsive Duration Buttons */}
         <div className='flex justify-center my-4'>
           {PlansData.map((plan) => (
             plan.id === 0 && (
-              <div key={plan.id} className='flex gap-4 bg-white rounded-lg shadow-md p-2 text-lg'>
+              <div key={plan.id} className='flex flex-col sm:flex-row gap-4 bg-white rounded-lg shadow-md p-2 text-lg'>
                 <button className='text-black px-6 py-2 rounded-full'>{plan.duration.monthly}</button>
                 <button className='bg-primary text-white px-8 py-4 rounded-lg'>{plan.duration.yearly}</button>
               </div>
             )
           ))}
         </div>
-        
       </div>
-      <div className='container m-auto flex justify-center gap-10 mb-20 '>
+      
+      {/* Responsive Plans Grid */}
+      <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8 md:gap-10 mb-20 px-4'>
         {PlansData.slice(1).map((plan) => (
-          <div key={plan.id} className=' rounded-4xl p-8 w-100 shadow-lg'>
-            <div className='mb-6 flex items-center flex-col'>
-              <h2 className=' text-3xl font-semibold mb-4'>{plan.name}</h2>
-              <p className='text-secondary text-center mb-4 w-62  text-lg leading-normal'>{plan.desc}</p>
+          <div key={plan.id} className='rounded-4xl p-8 shadow-lg text-center'>
+            {/* Plan Card Content */}
+            <div className='mb-6 flex flex-col items-center'>
+              <h2 className='text-3xl font-semibold mb-4'>{plan.name}</h2>
+              <p className='text-secondary mb-4 text-lg leading-normal max-w-sm'>{plan.desc}</p>
               <p className='text-5xl font-semibold mb-4'>{plan.price}</p>
             </div>
-            <div className=' bg-gray-50 rounded-xl p-6'>
-            <ul className='mb-6'>
-              {plan.features.map((feature, index) => (
-                <li key={index} className='text-black mb-2 flex flex-row gap-4 text-lg leading-12 items-center '><RiCheckboxCircleFill size={30} color='#54bd95'className=''/> {feature}</li>
-              ))}
-            </ul>
-              <button className='bg-white font-semibold text-primary w-full p-4 shadow-md rounded-2xl text-lg'>{plan.btn}</button>
+            
+            {/* Features and Button Section */}
+            <div className='bg-gray-50 rounded-xl p-6 flex flex-col items-center'>
+              <ul className='mb-6 flex flex-col items-start w-full px-4'>
+                {plan.features.map((feature, index) => (
+                  <li key={index} className='text-black mb-2 flex items-center justify-start gap-4 text-lg leading-12'>
+                    <RiCheckboxCircleFill size={30} color='#54bd95' />
+                    <span className='text-left'>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="login"><button className='bg-white font-semibold text-primary w-full p-4 shadow-md rounded-2xl text-lg cursor-pointer'>{plan.btn}</button></Link>
             </div>
           </div>
         ))} 
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Plans
+export default Plans;
+  

@@ -1,23 +1,20 @@
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Support from './components/Support'
-import Features from './components/Features'
-import Benefits from './components/Benefits'
-import Plans from './components/Plans'
-import Footer from './components/Footer'
+import Home from "./pages/Home"
+import NotFound from "./pages/NotFound"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const App = () => {
 
   return (
+
     <div>
-    <Header />
-    <Hero />
-    <Support />
-    <Features />
-    <Benefits />
-    <Plans />
-    <Footer />
+      <BrowserRouter >
+        <Routes >
+          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<NotFound />} />
+
+        </Routes>
+      </BrowserRouter>
+
     </div>
   )
 }

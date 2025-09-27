@@ -1,3 +1,17 @@
+const Navbar = {
+  logo: "Biccas",
+  links: [
+    { id: 1, link: "Home", path: "/" },
+    { id: 2, link: "Products", path: "products" },
+    { id: 3, link: "FAQ", path: "faq" },
+    { id: 4, link: "Blog", path: "blog" },
+    { id: 5, link: "About Us", path: "about-us" },
+  ],
+  buttons: ["Login", "Sign Up"],
+};
+
+export const NavbarData = Navbar;
+
 const Plans = [
   {
     id: 0,
@@ -93,18 +107,13 @@ const Footer = [
     logo: "Biccas",
     desc: "Get started now try our product",
     placeholder: "Enter your email here",
-    btn: "Subscribe",
+    btn: "",
   },
 ];
 
 export const FooterData = Footer;
 
 const Links = [
-  {
-    id: 0,
-    title: "Company",
-    links: ["About us", "Careers", "Blog", "Press"],
-  },
   {
     id: 1,
     title: "Support",

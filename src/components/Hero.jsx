@@ -6,6 +6,8 @@ import React from 'react'
 const Hero = () => {
   return (
     <>
+    {/*  add gradient background for hero section  */}
+    <div className=''>
     <div className='container m-auto flex justify-center mt-20'>
       <div className='w-6xl'>
         <div className='text-8xl font-bold w-5/6'>
@@ -35,6 +37,7 @@ const Hero = () => {
           <img src={BrandLogo} alt="" className='w-60'/>
           <img src={BrandLogo} alt="" className='w-60'/>
         </div>
+      </div>
       </div>
     </>
   )

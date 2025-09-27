@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import Support from './components/Support'
 import Features from './components/Features'
 import Benefits from './components/Benefits'
+import Plans from './components/Plans'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -14,6 +16,8 @@ const App = () => {
     <Support />
     <Features />
     <Benefits />
+    <Plans />
+    <Footer />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import React from 'react'
 
 const Benefits = () => {
   return (
-    <div className='flex flex-row items-start w-full gap-10 '>
+    <div className='flex flex-row m-auto gap-10  my-40'>
 
       <div className='container flex flex-col gap-6 w-1/2 ml-60'>
         <h1 className='text-6xl font-semibold w-lg leading-18'>What Benefit Will You Get</h1>

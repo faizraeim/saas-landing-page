@@ -14,7 +14,7 @@ const Header = () => {
         {/* Header content and mobile menu button */}
         <div className='flex justify-between items-center w-full md:w-auto'>
           {/* Logo */}
-          <div className='flex justify-center w-full md:w-auto'>
+          <div className='flex justify-start w-full md:w-auto'>
             <Link to="/">
               <p className='text-4xl font-bold text-primary cursor-pointer text-center'>{NavbarData.logo}</p>
             </Link>
@@ -44,7 +44,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Buttons (hidden on mobile, visible on md+) */}
-        <div className='hidden md:flex items-center space-x-4'>
+        <div className='hidden md:flex items-center space-x-4 '>
          <Link to="login"> <button className='text-secondary hover:text-primary transition-colors cursor-pointer'>
             {NavbarData.buttons[0]}
           </button></Link>
@@ -73,7 +73,7 @@ const Header = () => {
             </Link>
           ))}
 
-          <div className='mt-4 w-full flex flex-col items-center space-y-2 px-4'>
+          <div className='mt-4 w-full flex flex-col items-center space-y-2 px-4 font-semibold'>
             <Link to="login" className='w-full content-center py-2 text-secondary border rounded-lg hover:bg-gray-100 text-center' onClick={toggleMenu}>
               {NavbarData.buttons[0]}
             </Link>

@@ -76,9 +76,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='text-center border-t border-secondary pt-8 flex flex-row gap-4 items-center justify-around '>
-          <p className='text-secondary'>{CopyrightData[0].text}</p>
-          <p className='text-secondary mt-2'>{CopyrightData[0].terms}</p>
+        <div className='text-center font-semibold pt-8 flex flex-row gap-4 items-center justify-around '>
+          <p className=''>{CopyrightData[0].text}</p>
+          <p className=' mt-2'>{CopyrightData[0].terms}</p>
         </div>
         </div>
       </div>

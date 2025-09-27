@@ -3,7 +3,7 @@ const Navbar = {
   links: [
     { id: 1, link: "Home", path: "/" },
     { id: 2, link: "Products", path: "products" },
-    { id: 3, link: "FAQ", path: "faq" },
+    { id: 3, link: "FAQ", path: "../pages/faq" },
     { id: 4, link: "Blog", path: "blog" },
     { id: 5, link: "About Us", path: "about-us" },
   ],
@@ -146,3 +146,51 @@ const Copyright = [
 ];
 
 export const CopyrightData = Copyright;
+
+// FAQ Page
+
+const FaqData = [
+  {
+    title: `Things, you probably wonder.`,
+    faqs: [
+      {
+        id: "1",
+        question: "What is Biccas?",
+        answer:
+          "Biccas is a leading e-wallet application that allows users to manage their finances, make payments, and transfer money easily and securely.",
+      },
+      {
+        id: "2",
+        question: "How do I create an account?",
+        answer:
+          "To create an account, simply download the Biccas app from the App Store or Google Play, and follow the on-screen instructions to sign up.",
+      },
+      {
+        id: "3",
+        question: "Is Biccas safe to use?",
+        answer:
+          "Yes, Biccas uses advanced security measures, including encryption and two-factor authentication, to ensure that your financial information is protected.",
+      },
+      {
+        id: "4",
+        question: "Can I link my bank account to Biccas?",
+        answer:
+          "Yes, you can link your bank account to Biccas for easy transfers and payments. We support a wide range of banks and financial institutions.",
+      },
+      {
+        id: "5",
+        question: "Are there any fees for using Biccas?",
+        answer:
+          "Biccas offers a free basic plan with no fees. However, certain premium features and transactions may incur fees. Please refer to our pricing page for more details.",
+      },
+      {
+        id: "6",
+        question: "How do I contact customer support?",
+        answer:
+          "You can contact our customer support team through the app, via email at",
+      },
+    ],
+  },
+];
+
+export const FaqPageData = FaqData;

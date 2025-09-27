@@ -1,3 +1,4 @@
+import Faq from "./pages/Faq"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -10,8 +11,8 @@ const App = () => {
       <BrowserRouter >
         <Routes >
           <Route path="/" element={<Home />} />
+          <Route path="/pages/faq" element={<Faq />} />
           <Route path="/*" element={<NotFound />} />
-
         </Routes>
       </BrowserRouter>
 

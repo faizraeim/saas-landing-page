@@ -45,10 +45,10 @@ const Header = () => {
 
         {/* Desktop Buttons (hidden on mobile, visible on md+) */}
         <div className='hidden md:flex items-center space-x-4 '>
-         <Link to="login"> <button className='text-secondary hover:text-primary transition-colors cursor-pointer'>
+         <Link to="/login"> <button className='text-secondary hover:text-primary transition-colors cursor-pointer'>
             {NavbarData.buttons[0]}
           </button></Link>
-         <Link to="signup"><button className='bg-primary p-2 text-[#F8F8FA] rounded-lg hover:bg-opacity-80 transition-colors cursor-pointer'>
+         <Link to="/signup"><button className='bg-primary p-2 text-[#F8F8FA] rounded-lg hover:bg-opacity-80 transition-colors cursor-pointer'>
             {NavbarData.buttons[1]}
           </button></Link> 
         </div>
@@ -74,10 +74,10 @@ const Header = () => {
           ))}
 
           <div className='mt-4 w-full flex flex-col items-center space-y-2 px-4 font-semibold'>
-            <Link to="login" className='w-full content-center py-2 text-secondary border rounded-lg hover:bg-gray-100 text-center' onClick={toggleMenu}>
+            <Link to="/login" className='w-full content-center py-2 text-secondary border rounded-lg hover:bg-gray-100 text-center' onClick={toggleMenu}>
               {NavbarData.buttons[0]}
             </Link>
-            <Link to="signup" className='w-full py-2 bg-primary text-[#F8F8FA] rounded-lg hover:bg-opacity-80 text-center ' onClick={toggleMenu}>
+            <Link to="/signup" className='w-full py-2 bg-primary text-[#F8F8FA] rounded-lg hover:bg-opacity-80 text-center ' onClick={toggleMenu}>
               {NavbarData.buttons[1]}
             </Link>
           </div>

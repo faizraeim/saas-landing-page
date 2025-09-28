@@ -28,9 +28,7 @@ const AboutUs = () => {
         </div>
       </div>
     </section>
-    <div className='my-12'>
     <Footer />
-    </div>
       
     </>
   )

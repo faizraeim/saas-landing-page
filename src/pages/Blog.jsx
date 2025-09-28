@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { blogPosts } from '../data/data'
+import { Link } from 'react-router-dom'
 // import { RiCheckLine } from '@remixicon/react'
 // import { Link } from 'react-router-dom'
 
@@ -30,13 +31,11 @@ const Blog = () => {
             {/* <br /> */}
 
 
-            <a href={post.link} className='text-primary hover:underline cursor-pointer'>Read more</a>
+             <Link to={`/blog/${post.id}`} className='text-primary hover:underline cursor-pointer'>Read more</Link>
           </div>
         ))}
       </div>
-      <div className='my-12'>
       <Footer />
-      </div>
     </>
   )
 }

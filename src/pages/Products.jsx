@@ -25,8 +25,8 @@ const Products = () => {
               <p key={index} className='product-feature flex items-center gap-2 ' ><RiCheckLine color='#54bd95'/> {feature}</p>
             ))}
             </div>
-           <Link to="/demo"><button className='w-auto text-lg text-white bg-primary rounded-lg py-2 px-6 font-semibold border border-transparent hover:border-primary hover:bg-white hover:text-primary transition-colors cursor-pointer'>Learn More</button>
-           </Link> 
+           <Link to={`/product/${product.id}`} className='w-auto text-lg text-white bg-primary rounded-lg py-2 px-6 font-semibold border border-transparent hover:border-primary hover:bg-white hover:text-primary transition-colors cursor-pointer'>Learn More</Link>
+           
           </div>
           
         ))}

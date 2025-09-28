@@ -15,14 +15,24 @@ const Navbar = {
   links: [
     { id: 1, link: "Home", path: "/" },
     { id: 2, link: "Products", path: "../pages/products" },
-    { id: 3, link: "FAQ", path: "../pages/faq" },
-    { id: 4, link: "Blog", path: "../pages/blog" },
-    { id: 5, link: "About Us", path: "../pages/about-us" },
+    { id: 3, link: "Blog", path: "../pages/blog" },
+    { id: 4, link: "About Us", path: "../pages/about-us" },
+    { id: 5, link: "FAQ", path: "../pages/faq" },
   ],
   buttons: ["Login", "Sign Up"],
 };
 
 export const NavbarData = Navbar;
+
+const BrandsLogos = [
+  { id: 1, name: "unspalsh", path: "/src/assets/unsplash.png" },
+  { id: 2, name: "notion", path: "/src/assets/notion.png" },
+  { id: 3, name: "intercom", path: "/src/assets/intercome.png" },
+  { id: 4, name: "descript", path: "/src/assets/descript.png" },
+  { id: 1, name: "grammarly", path: "/src/assets/grammarly.png" },
+];
+
+export { BrandsLogos };
 
 const Plans = [
   {
@@ -38,7 +48,8 @@ const Plans = [
     id: 1,
     name: "Free",
     desc: "Have a go and test your superpowers",
-    price: "$0",
+    price: [0, 0],
+
     features: [
       "2 Users",
       "2 Files ",
@@ -52,7 +63,7 @@ const Plans = [
     id: 2,
     name: "Pro",
     desc: "Experiment the power of infinite possibilities",
-    price: "$8",
+    price: [8, 10],
     features: [
       "4 Users",
       "All Apps",
@@ -66,7 +77,7 @@ const Plans = [
     id: 3,
     name: "Business",
     desc: "Unveil new superpowers and join the Design League",
-    price: "$16",
+    price: [16, 20],
     features: [
       "All the features of pro plan",
       "Account success manager",
@@ -362,4 +373,4 @@ const blogPosts = [
 ];
 export { blogPosts };
 
-// End of src/data/data.js
+// Login Page Data

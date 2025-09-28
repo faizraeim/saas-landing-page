@@ -27,7 +27,7 @@ const Benefits = () => {
       </div>  
 
       {/* Image content */}
-      <div className='w-full lg:w-1/2 flex justify-center lg:justify-end items-center'>
+      <div className='w-full lg:w-1/3 flex justify-center lg:justify-end items-center'>
         <img src={LaptopImg} alt="Laptop" className='w-full h-auto max-w-lg lg:max-w-none' />
       </div>    
     </div>

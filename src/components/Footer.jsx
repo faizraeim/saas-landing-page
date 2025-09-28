@@ -45,9 +45,9 @@ const Footer = () => {
               <textarea className='bg-white placeholder:text-secondary p-5 rounded-md text-sm w-full' placeholder={FormData[0].placeholder[1]}></textarea>
             </div>
             <button className='w-full bg-primary p-4 rounded-md cursor-pointer'>
-              <a href="https://www.google.com" target='_blank' rel='noreferrer'>{FormData[0].btn}</a>
+              <a href="login" target='' rel='noreferrer'>{FormData[0].btn}</a>
             </button>
-            <a className='text-sm m-2 cursor-pointer' href='https://www.google.com' target='_blank' rel='noreferrer'>{FormData[0].link}</a>
+            <a className='text-sm m-2 cursor-pointer' href='login' target='' rel='noreferrer'>{FormData[0].link}</a>
           </div>
         </div>
 

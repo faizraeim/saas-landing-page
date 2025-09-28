@@ -1,7 +1,7 @@
 import { RiPlayCircleLine } from '@remixicon/react'
 import { Link } from 'react-router-dom'
 import HeroImg from '../assets/hero-img.png'
-import BrandLogo from '../assets/unsplash.png'
+import { BrandsLogos } from '../data/data'
 import React from 'react'
 
 const Hero = () => {
@@ -24,11 +24,12 @@ const Hero = () => {
             </div>
             {/* Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-auto'>
-              <Link to="trial" className='bg-primary p-4 text-white rounded-full px-8 cursor-pointer'>Try free trial</Link>
-              <div className='flex items-center gap-4 justify-center cursor-pointer'>
+              <Link to="signup" className='bg-primary p-4 text-white rounded-full px-8 cursor-pointer'>Try free trial</Link>
+              <Link to="https://www.youtube.com/watch?v=pQpFebyALV0" target='_blank'><div className='flex items-center gap-4 justify-center cursor-pointer'>
                 <RiPlayCircleLine size={30} color='black' />
-               <Link to="demo"><button className='text-black'>View Demo</button></Link>
+               <button className='text-black cursor-pointer'>View Demo</button>
               </div>
+              </Link>
             </div>
           </div>
           
@@ -43,10 +44,10 @@ const Hero = () => {
           <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-black'>
             More than 25,000 teams use Collabs
           </h2>
-          <div className='flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-20 mt-10 md:mt-12'>
+          <div className='flex flex-wrap items-center justify-center gap-8  md:gap-12 lg:gap-20 mt-10 md:mt-12'>
             {/* Using map to render brand logos for better code management */}
-            {[...Array(5)].map((_, i) => (
-              <img key={i} src={BrandLogo} alt="Brand logo" className='w-24 md:w-32 lg:w-40 h-auto' />
+            {BrandsLogos.map(logo => (
+              <img key={logo.id} src={logo.path} alt={logo.name} className='w-50'/>
             ))}
           </div>
         </div>

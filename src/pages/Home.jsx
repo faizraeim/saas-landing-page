@@ -8,6 +8,7 @@ import Benefits from '../components/Benefits'
 import Plans from '../components/Plans'
 import Footer from '../components/Footer'
 
+
 const Home = () => {
   return (
     <>

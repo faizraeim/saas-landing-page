@@ -77,7 +77,7 @@ const Header = () => {
             <Link to="login" className='w-full content-center py-2 text-secondary border rounded-lg hover:bg-gray-100 text-center' onClick={toggleMenu}>
               {NavbarData.buttons[0]}
             </Link>
-            <Link to="signup" className='w-full py-2 bg-primary text-[#F8F8FA] rounded-lg hover:bg-opacity-80 text-center' onClick={toggleMenu}>
+            <Link to="signup" className='w-full py-2 bg-primary text-[#F8F8FA] rounded-lg hover:bg-opacity-80 text-center ' onClick={toggleMenu}>
               {NavbarData.buttons[1]}
             </Link>
           </div>

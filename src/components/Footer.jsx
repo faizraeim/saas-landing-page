@@ -1,6 +1,7 @@
 import React from 'react'
 import { TestimonialsData, FooterData, FooterLinks, CopyrightData, FormData } from '../data/data'
 import { RiArrowRightLine, RiDoubleQuotesL, RiMoneyDollarCircleFill, RiPlayCircleLine } from '@remixicon/react'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -24,9 +25,9 @@ const Footer = () => {
                     {thought.img.map((img, index) => (
                       <img key={index} src={img} alt={thought.name} className='rounded-full w-16 h-16 md:w-20 md:h-20 object-cover' />
                     ))}
-                    <button>
+                    <a href='https://www.youtube.com/watch?v=pQpFebyALV0' target='_blank' >
                       <RiPlayCircleLine size={90} />
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -44,10 +45,10 @@ const Footer = () => {
               <label className='text-base md:text-lg mb-2'>{FormData[0].label[1]}</label>
               <textarea className='bg-white placeholder:text-secondary p-5 rounded-md text-sm w-full' placeholder={FormData[0].placeholder[1]}></textarea>
             </div>
-            <button className='w-full bg-primary p-4 rounded-md cursor-pointer'>
-              <a href="login" target='' rel='noreferrer'>{FormData[0].btn}</a>
-            </button>
-            <a className='text-sm m-2 cursor-pointer' href='login' target='' rel='noreferrer'>{FormData[0].link}</a>
+            <a href='/login' className='w-full bg-primary p-4 rounded-md cursor-pointer text-center'>
+              <button href="/login" rel='noreferrer'>{FormData[0].btn}</button>
+            </a>
+            <a className='text-sm m-2 cursor-pointer' href='/login' target='' rel='noreferrer'>{FormData[0].link}</a>
           </div>
         </div>
 
@@ -59,7 +60,7 @@ const Footer = () => {
             
             <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 relative w-full'>
               <input type="text" placeholder={FooterData[0].placeholder} className='bg-transparent border-2 border-secondary placeholder:text-secondary placeholder:text-lg p-4 rounded-full text-sm w-full' />
-              <button className='bg-primary text-white rounded-full w-auto p-2 h-auto absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center'><RiArrowRightLine size={25}/> {FooterData[0].btn}</button>
+              <button className='bg-primary text-white rounded-full w-auto p-2 h-auto absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer'><RiArrowRightLine size={25}/> {FooterData[0].btn}</button>
             </div>
           </div>
           <div className='w-full lg:w-2/4 flex flex-col sm:flex-row justify-between text-center lg:text-lg lg:text-left gap-8 md:gap-12'>
@@ -68,7 +69,7 @@ const Footer = () => {
                 <h3 className='text-lg font-bold mb-4'>{section.title}</h3>
                 <ul>
                   {section.links.map((link, index) => (
-                    <li key={index} className='text-secondary mb-2 hover:text-white transition-colors duration-200 cursor-pointer'>{link}</li>
+                   <Link to={"/demo"}> <li key={index} className='text-secondary mb-2 hover:text-white transition-colors duration-200 cursor-pointer'>{link}</li></Link>
                   ))}
                 </ul>
               </div>
